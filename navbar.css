@@ -1,0 +1,1534 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+*:not(i) {
+    font-family: "Open Sans", sans-serif; 
+}
+span{
+    color: rgb(31,162,212);
+}
+header {
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    background-color: rgb(255, 252, 252);
+    box-shadow: 4px 4px 25px rgba(51, 51, 51, 0.192);
+    padding: 15px 90px 0px 80px;
+    z-index: 4;
+    
+    
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    font-size: 14px;
+  
+    text-decoration: none;
+    margin-left: 30px;
+}
+
+nav a#logo {
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    font-family: euclid_circular_a, Arial, "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+nav ul a {
+    color: rgb(26, 24, 24);
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav ul a:hover {
+   color: rgb(31,162,212);
+}
+#ham-menu {
+    display: none;
+}
+nav ul.active {
+    left: 0;
+}
+.dropbtn {
+    background-color: rgb(31,162,212);
+    color: white;
+    padding: 8px;
+    width: 120px;
+    font-size: 14px;
+    border: 1px solid rgb(31,162,212);
+    margin-top: -3px;
+    margin-left: 25px;
+    transition: 0.4s;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    transition: 0.3s;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color:rgb(240, 237, 237);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(153, 151, 151, 0.2);
+    transition: 0.3s;
+    border-radius: 7px;
+    
+  }
+  
+  .dropdown-content a {
+    color: rgb(3, 3, 3);
+    padding: 12px 16px;
+    font-size: 13px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {
+    color:rgb(31,162,212);
+    }
+  
+  .dropdown:hover .dropdown-content {display: block;}
+  
+ /* slider */
+ 
+.carousel-item {
+    height: 100vh;
+    min-height: 300px;
+    width: 100%;
+}
+
+.carousel-item img {
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+    -webkit-background-size: cover;
+}
+
+/* .carousel-caption {
+    z-index: 2;
+    color: white;
+    margin-bottom: 100px;
+} */
+.carousel-caption {
+    z-index: 2;
+    color: white;
+    margin-bottom: 120px; 
+}
+
+.carousel-caption h1 {
+    font-size: 55px;
+    word-spacing: 5px;
+    padding-bottom: 10px;
+    font-weight: 900;
+    font-family: "Playfair Display", serif;
+}
+
+.carousel-caption h4 {
+    font-family: system-ui;
+    font-size: 19px;
+    font-weight: 450;
+}
+
+.carousel-caption button {
+    padding: 9px;
+    width: 120px;
+    margin-top: 20px;
+    font-size: 12px;
+    border: 1px solid rgb(31,162,212);
+    /* background-color: rgb(31,162,212); */
+    color: white;
+    border-radius: 7px;
+    transition: 0.3s;
+    background-image: radial-gradient( circle 610px at 5.2% 51.6%,  rgba(5,8,114,1) 0%, rgba(7,3,53,1) 97.5% );
+}
+
+.carousel-caption button:hover {
+    background-color: white;
+    /* color: black; */
+    border: 1px solid rgb(20, 19, 19);
+}
+
+.carousel-inner::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.836), rgba(31, 161, 212, 0.541));
+    /* background-color: rgba(0, 0, 0, 0.212); */
+    z-index: 1;
+}
+.w-100 {
+    height: 100vh;
+}
+
+#slider{
+    text-align: left;
+}
+.contact{
+    padding: 5px;
+    width: 110px;
+    margin-left: 10px;
+    font-size: 14px;
+    border: 1px solid rgb(31,162,212);
+    background-color: rgb(31,162,212);
+    color: white;
+    transition: 0.3s;
+}
+.contact:hover {
+    background-color: rgb(9, 10, 10);
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(0, 0, 0);
+}
+.building{
+    display: flex;
+    margin: 60px;
+    margin-top: 30px;
+    
+}
+.building div{
+    margin: 15px;
+}
+.construction-engineer{
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.932), rgba(19, 126, 175, 0.829)) ,url(img/stee.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    text-align: center;
+    color: white;
+    border-radius: 8px;
+}
+.construction-building{
+    background-image: linear-gradient(to right,rgba(0, 0, 0, 0.952), rgba(22, 133, 184, 0.938)) , url(img/finishing.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+}
+.inner-text{
+    padding: 20px;
+    z-index: 3;
+}
+.inner-text h1{
+    font-size: 28px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.inner-text button:hover{
+    background-color: white;
+   border: 1px solid white;
+   color: #000000; 
+}
+
+/* ------------------Services section  ---------------------*/
+.services-header{
+    text-align: center;
+    margin-top: 80px;
+
+}
+.services-header h4{
+    color:  rgb(31,162,212);
+    font-size: 16px;
+    font-weight: 500;
+}
+.services-header h1{
+    font-size: 40px;
+    color: rgb(92, 80, 80);
+    padding-top: 10px;
+}
+.services-header img{
+    height: 40px;
+    width: 40px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    
+}
+ /* Services body */
+ .services-body{
+    margin-top: 50px;
+    text-align: center;
+ }
+ .services-body img{
+    width: 100%;
+    cursor: pointer;
+    transition: 0.3s;
+ }
+ .services-body img:hover{
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+ }
+ .services-body  h1{
+    font-size: 20px;
+    font-weight: 500;
+    padding-top: 15px;
+ }
+ .services-body p{
+    font-size: 14px;
+    color: rgb(114, 110, 110);
+ }
+ .services-body button a{
+    text-decoration: none;
+    color: white;
+ }
+ .services-body button{
+    border: 1px solid rgb(31,162,212);
+    background-color: rgb(31,162,212);
+    font-size: 12px;
+    padding: 6px;
+    border-radius: 3px;
+ }
+ /* timeline */
+ .main{
+    width: 100%;
+    margin-top: 30px;
+    height: auto;
+    background-color: rgb(255, 255, 255);
+    font-family: poppins;
+    padding: 50px 0;
+    display: grid;
+    place-items: center;
+}
+.main .heading{
+    font-size: 27px;
+    font-weight: 500;
+    color: rgba(33, 35, 36, 0.849);
+    position: relative;
+    margin-bottom: 80px;
+}
+.heading::after{
+    content: " ";
+    position: absolute;
+    width: 50%;
+    height: 4px;
+    left: 50%;
+    bottom: -5px;
+    background-image: linear-gradient(to right, rgb(22, 214, 228),rgb(31,162,212));
+    transform: translateX(-50%);
+}
+
+/* Container222 Css Start  */
+#time-link {
+    color: rgb(31,162,212);;
+
+}
+.container222{
+    margin-top: 70px;
+    width: 70%;
+    height: auto;
+    position: relative;
+}
+.container222 ul::after{
+    position: absolute;
+    content: '';
+    width: 2px;
+    height: 100%;
+    background-image: linear-gradient(to right, rgb(22, 214, 228),rgb(31,162,212));
+}
+.container222 ul{
+    list-style: none;
+}
+.container222 ul li{
+    width: 50%;
+    height: auto;
+    padding: 15px 20px;
+    background-color: #ffffff;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 25px rgba(51, 51, 51, 0.192);
+    position: relative;
+    z-index: 3;
+}
+.container222 ul li:nth-child(odd){
+    float: left;
+    clear: right;
+    transform: translateX(-30px);
+}
+.container222 ul li:nth-child(odd) .date{
+    right: 20px;
+}
+.container222 ul li:nth-child(even){
+    float: right;
+    clear: left;
+    transform: translateX(30px);
+}
+.container222 ul li:nth-child(4){
+    margin-bottom: 0;
+}
+.container222 ul li .title{
+    font-size: 20px;
+    font-weight: 500;
+    color:rgb(31,162,212);
+}
+ul li p{
+    font-size: 15px;
+    color: #444;
+    margin: 7px 0;
+    line-height: 23px;
+}
+ul li a{
+    font-size: 15px;
+    color: rgb(17, 16, 17);
+    text-decoration: none;
+}
+ul li .date{
+    position: absolute;
+    top: -45px;
+    width: 155px;
+    height: 35px;
+    border-radius: 20px;
+    color: #fff;
+    background-image:linear-gradient(to right, rgb(22, 214, 228),rgb(18, 128, 172));
+    display: grid;
+    place-items: center;
+    font-size: 14px;
+}
+.container222 ul li .circle{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgb(87, 184, 223);
+    position: absolute;
+    top: 0;
+}
+.container222 ul li .circle::after{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: rgb(226, 228, 227);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.container222 ul li:nth-child(odd) .circle{
+    right: -30px;
+    transform: translate(50%, -50%);
+}
+.container222 ul li:nth-child(even) .circle{
+    left: -30px;
+    transform: translate(-50%, -50%);
+}
+
+/*  Media Query Started  */
+ /*----------------- experience section -----------------*/
+ .experience{
+    margin-top: 70px;
+ }
+ .experience-text{
+    margin-top:50px;
+ }
+ .experience-text h4{
+    color:  rgb(31,162,212);
+    font-size: 16px;
+ }
+ .experience-text h1{
+  font-size: 38px;
+  margin-top: 15px;
+ }
+ .experience-text p{
+    font-size: 16px;
+    color: rgb(129, 111, 111);
+    margin-top: 20px;
+ }
+ .experience-text button{
+    background-color: rgb(43, 44, 45);
+    border: 1px solid rgb(31,162,212);
+    color: white;
+    padding: 12px;
+    font-size: 11px;
+    width: 140px;
+    transition: 0.3s;
+    cursor: pointer;
+    margin-top: 5px;
+    border-radius: 7px;
+    background-image: radial-gradient( circle 610px at 5.2% 51.6%,  rgba(5,8,114,1) 0%, rgba(7,3,53,1) 97.5% );
+
+ }
+ .experience-text button:hover{
+    background-color: rgb(14, 15, 15);
+    border: 1px solid rgb(2, 2, 2);
+ }
+ 
+.experience-img img{
+    width: 100%;
+    height: 680px;
+
+}
+.experience-manager{
+    float: right;
+}
+.experience-manager h2{
+    font-size: 18px;
+}
+.experience-manager p{
+    font-size: 15px;
+    margin-top: -5px;
+    text-align: right;
+}
+
+
+ /* Professional company */
+ .professional-section{
+   margin-top: 100px;
+   background-image: linear-gradient(to right, rgba(15, 14, 14, 0.795), rgba(28, 135, 197, 0.849)) ,url(img/our-clients-duche-trading.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-attachment: fixed;
+   padding: 100px;
+   color: white;
+   text-align: left;
+ }
+ .envir{
+    /* background-image: linear-gradient(to right, rgba(15, 14, 14, 0.795), rgba(28, 135, 197, 0.849)) ,url(); */
+   
+    background-image: url('https://img.freepik.com/premium-photo/world-water-day-hands-waiting-world-water-drop-shape-background-blurred-flowers-sky-with-light-sun-elements-this-image-furnished-by-nasa_35691-3777.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #000000;
+    opacity: 0.5;
+    
+ }
+ .professional-section h1{
+ font-size: 33px;
+    z-index: 2;
+ padding-top: 50px;
+ }
+ .professional-section h4{
+    font-size: 17px;
+    padding-top: 20px;
+    z-index: 2;
+ }
+ 
+ /* construction section */
+ .construction-head{
+    text-align: center;
+    margin-top: 100px;
+ }
+ .construction-head h4{
+    color: #000000;
+    font-size: 25px;
+    font-weight: 300;
+ }
+.construction-head h1{
+    font-size: 43px;
+    padding-top: 5px;
+
+}
+.construction-head img{
+    height: 40px;
+    width: 40px;
+}
+ /* construction  body section  */
+
+ .professional-body{
+    margin-top: 40px;
+ }
+ .professional-img img{
+    margin-top: 18px;
+    transition: 0.4s;
+    height: 280px;
+    width: 300px;
+ }
+ .professional-img img:hover{
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+
+ }
+ 
+ .footer-section{
+    margin-top: 100px;
+    background-color: rgb(25,25,25);
+    color: white;
+    padding-top: 90px;
+    padding-bottom: 10px;
+    width: 100%;
+ }
+ .footer-section img{
+    margin-bottom: 15px;
+ }
+ .footer-section h1{
+    font-size: 18px;
+    margin-bottom: 20px;
+ }
+ .footer-section h4{
+    font-size: 15px;
+    color: rgb(194, 186, 186);
+ }
+ .footer-section p{
+    color: rgb(194, 186, 186);
+    margin-top: 5px;
+    font-size: 15px;
+ }
+ .footer-section button{
+    padding: 15px;
+    background-color: #888;
+    border:  1px solid gray;
+    width: 250px;
+    color: white;
+    text-align: start;
+    font-size: 14px;
+    margin-top: 15px;
+ }
+ .subscribe-button button{
+    background-color: rgb(248,189,12);
+    border: 1px solid rgb(248,189,12);
+
+ }
+ .footer-icon{
+    display: flex;
+ }
+ .footer-icon img{
+    height: 13px;
+    width: 13px;
+    margin: 10px;
+ }
+ .hr{
+    margin-top: 30px;
+ }
+ .footer-footer{
+    background-color: rgb(25,25,25);
+    color: rgb(192, 181, 181);
+ }
+ .footer-terms{
+    display: flex;
+ }
+ .footer-terms h4{
+    font-size: 12px;
+    font-weight: 600;
+    margin: 8px;
+ }
+ .Mission-section{
+margin-top: 100px;    
+ }
+ .Mission-section h1{
+    font-size: 38px;
+    color: #464242;
+ }
+ .Mission-section h4{
+    color:  rgb(31,162,212);
+    font-size: 18px;
+    margin-top: 15px;
+ }
+ .Mission-section p{
+    font-size: 15px;
+    color: #888;
+ }
+
+ /* company logo */
+ .brand-section{
+    margin-top: 100px;
+    background-image:  linear-gradient(to right, rgba(15, 14, 14, 0.795), rgba(28, 135, 197, 0.849)), url(img/our-clients-duche-trading.jpg);
+    background-repeat: none;
+    color: white;
+    background-attachment: scroll;  
+    background-size: cover;
+    padding-bottom: 50px;
+    
+ }
+ .brand-section img{
+    width: 90%;
+    height: 180px;
+    margin-top: 15px;
+    margin-bottom: 25px;
+ }
+ .brand-text h1{
+    padding-top: 50px;
+ }
+
+ /* core section */
+ .core-header{
+    text-align: center;
+    padding-top: 130px;
+    padding-bottom: 30px;
+ }
+ .core-header h1{
+    font-size: 38px;
+    color: #464242;
+ }
+ .core-header p{
+    font-size: 16px;
+    color: rgb(129, 111, 111);
+    margin-top: 20px;
+ }
+ .core-card{
+    box-shadow: 4px 4px 5px rgba(29, 27, 27, 0.192);;
+    margin-bottom: 25px;
+    padding-left: 30px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    margin-top: 35px;
+ }
+ 
+ .core-card h1{
+    font-size: 19px;
+    font-weight: 600;
+    padding-top: 18px;
+    color:  rgb(31,162,212);
+ }
+ .core-card p{
+    font-size: 15px;
+    color: rgb(129, 111, 111);
+    margin-top: 10px;
+
+ }
+ /* Services  page start*/
+ .back{
+    display: none;
+ }
+.services2-section{
+ margin-bottom: -100px;
+ background-position: center center;
+ padding: 50px;
+ width: 100%;
+ background-image:  linear-gradient(to right, rgba(0, 0, 0, 0.822), rgba(28, 135, 197, 0.849)), url(img/our-clients-duche-trading.jpg);
+ background-repeat: none;
+ color: white;
+ background-size: cover;
+}
+.services2-Header{
+    text-align: center;
+    padding-top: 110px;
+    color: white;
+
+}
+.services2-Header h4{
+    font-size: 16px;
+}
+.services2-Header h1{
+    font-size: 37px;
+    font-weight: 500;
+    padding-top: 5px;
+} 
+.services2-Header img{
+    height: 40px;
+    width: 40px;
+    margin-top: 10px;
+}
+/* Architectural-services */
+.Architectural-services{
+    margin-top: 110px;
+    width: 100%;
+    padding: 50px;
+    background-color: rgba(177, 25, 25, 0.12);
+    border-radius: 12px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+}
+.Architectural-services h1{
+    font-size: 30px;
+}
+.Architectural-services p{
+    font-size: 16px;
+    padding-top: 30px;
+}
+.Architectural-services img{
+    height: 40px;
+    width: 40px;
+    margin-top: 10px;
+}
+.director{
+    float: right;
+}
+.director h4{
+    font-size: 18px;
+}
+.director h5{
+    float: right;
+    font-size: 15px;
+}
+@media screen and (max-width:1224px){
+    .container222{
+        width: 85%;
+    }
+}
+@media only screen and (max-width: 991px) {
+    header {
+        padding: 10px 20px 20px 20px;
+        
+        
+    }
+    
+    .Topbar{
+        display: none;
+    }
+    #ham-menu {
+        display: block;
+        color: #000000;
+    }
+    nav a#logo,
+    #ham-menu {
+        font-size: 23px;
+    }
+    nav ul {
+        background-color: rgb(255, 255, 255);
+        left: -100vw;
+        top: 60px;
+        width: 100vw;
+        position: fixed;
+        height: calc(100vh - 73.6px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transition: 1s;
+        gap: 0;
+        z-index: 3;
+    }
+    nav ul li a {
+        font-size: 20px;
+    }
+    
+    
+
+    .building{
+        margin-top: 140px;
+        margin: 30px;
+    }
+    .building div{
+        margin: 15px;
+    }
+    .inner-text{
+        border: none;
+        padding: 0px;
+      
+        
+    }
+    .inner-text h1{
+        margin-top: 90px;
+    }
+    .experience-text{
+        margin-top: 30px;
+        padding-top: 60px;
+     }
+     .experience-text h4{
+        color:  rgb(31,162,212);
+        font-size: 15px;
+     }
+     .experience-text h1{
+      font-size: 30px;
+      margin-top: 15px;
+     }
+     .experience-text p{
+        font-size: 14px;
+        color: rgb(129, 111, 111);
+        margin-top: 20px;
+     }
+     .experience-text button{
+        
+        padding: 10px;
+        font-size: 11px;
+        width: 120px;
+        transition: 0.3s;
+        cursor: pointer;
+        margin-top: 5px;
+     }
+     
+.experience-img img{
+    width: 100%;
+    height: 570px;
+
+}
+.Blog-body button{
+    display: none
+}
+ .blog-card{
+    margin-top: 25px;
+ }   
+
+ .professional-img img{
+    margin-top: 18px;
+    transition: 0.4s;
+    width: 100%;
+ }
+ .brand-section img{
+    width: 100%;
+    height: 140px;
+    margin-top: 15px;
+    margin-bottom: 25px;
+ }
+ .carousel-item {
+    height: 80vh;
+    min-height: 300px;
+    width: 100%;
+}
+ .carousel-caption {
+    margin-bottom: 240px;
+    text-align: center; 
+}   
+.carousel-caption h4{
+    font-size: 25px;
+}
+.carousel-caption h1{
+    font-size: 60px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+}
+.carousel-caption button{
+    font-size: 19px;
+    width: 170px;
+    padding: 8px;
+    margin-top: 35px;
+}
+#text3{
+    display: none;
+}
+.inner-text h1{
+    font-size: 38px;
+
+}
+.inner-text h4{
+    font-size: 25px;
+}
+.inner-text button{
+    font-size: 18px;
+    width: 180px;
+
+}
+.services-header h4{
+    font-size: 25px;
+}
+.services-header h1{
+    font-size: 55px;
+}
+.services-card h1{
+    font-size: 24px;
+}
+.services-card p{
+    font-size: 22px;
+}
+.Mission-section h1{
+    font-size: 45px;
+}
+.Mission-section h4{
+    font-size: 22px;
+}
+.Mission-section p{
+    font-size: 25px;
+    margin-top: 15px;
+    
+}
+.container222{
+    width: 80%;
+    transform: translateX(15px);
+}
+.container222 ul::after{
+    left: -30px;
+}
+.container222 ul li{
+    width: 100%;
+    float: none;
+    clear: none;
+    margin-bottom: 80px;
+}
+.container222 ul li:nth-child(odd){
+    text-align: left;
+    transform: translateX(0);
+}
+.container222 ul li:nth-child(odd) .date{
+    left: 20px;
+}
+.container222 ul li:nth-child(odd) .circle{
+    left: -30px;
+    transform: translate(-50%, -50%);
+}
+.container222 ul li:nth-child(even){
+    transform: translateX(0);
+}
+.experience-text{
+    margin-top: -20px;
+}
+ .experience-text h4{
+    font-size: 23px;
+    display: none;
+
+ }
+ .experience-text h1{
+    font-size: 30px;
+   display: none;
+ }
+ .experience-text button{
+    font-size: 18px;
+    width: 200px;
+ }
+ .Blog-header h4{
+    font-size: 25px;
+    color: rgb(15, 86, 153);
+
+ }
+ .Blog-header h1{
+    font-size: 40px;
+ }
+ .experience-text p{
+    font-size: 22px;
+ }
+.blog-card h1{
+    font-size: 26px;
+    line-height: 35px;
+
+}
+.blog-card p{
+    font-size: 25px;
+}
+.blog-card h4{
+    font-size: 20px;
+}
+.professional-section h1{
+    font-size: 35px;
+}
+.professional-section h4{
+    font-size: 25px;
+}
+.professional-section p{
+    font-size: 25px;   
+}
+.construction-head h4{
+    font-size: 28px;
+}
+.construction-head h1{
+    font-size: 45px;
+}
+.construction-head h1{
+    font-size: 45px;
+
+
+}
+.brand-text{
+    padding-bottom: 20px;
+}
+.footer-section h1{
+    font-size: 25px;
+    padding-top: 15px;
+
+}
+.footer-section h4{
+    font-size: 25px;
+}
+.footer-section p{
+    font-size: 25px;
+}
+.footer-section button{
+    font-size: 20px;
+}
+.footer-section img{
+    height: 50px;
+}
+
+.footer-footer{
+    display: none;
+}
+.building{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+.building div{
+    margin: 3px;
+    margin-top: 50px;
+}
+.inner-text h1{
+    font-size: 26px;
+    padding-top: 10px;
+}
+.Architectural-services{
+    margin-top: 110px;
+    width: 100%;
+    padding: 50px;
+    background-color: rgba(177, 25, 25, 0.12);
+    border-radius: 12px;
+}
+
+.Architectural-services h1{
+    font-size: 30px;
+}
+.Architectural-services p{
+    font-size: 25px;
+    padding-top: 30px;
+}
+.Architectural-services img{
+    height: 40px;
+    width: 40px;
+    margin-top: 10px;
+}
+.director{
+    float: right;
+}
+.director h4{
+    font-size: 25px;
+}
+.director h5{
+    float: right;
+    font-size: 25px;
+}
+.services2-Header h4{
+    font-size: 22px;
+}
+.services2-Header h1{
+    font-size: 47px;
+    font-weight: 500;
+    padding-top: 5px;
+} 
+.services2-Header img{
+    height: 60px;
+    width: 60px;
+    margin-top: 10px;
+}
+.dropdown{
+    display: none;
+}
+}
+
+
+@media only screen and (max-width: 767px) {
+   
+    .carousel-caption {
+        z-index: 2;
+        color: white;
+        margin-bottom: 30px;
+    }
+    .carousel-caption h1 {
+        font-size: 50px;
+        word-spacing: 5px;
+        padding-bottom: 10px;
+        font-weight: 600;
+        font-family: "Playfair Display", serif;
+    }
+    .carousel-caption h4 {
+        font-family: Roboto, sans-serif;
+        font-size: 15px;
+        font-weight: 500;
+    }
+    .carousel-caption button {
+        padding: 9px;
+        width: 140px;
+        margin-top: 50px;
+        font-size: 15px;
+        border: 1px solid rgb(1, 142, 213);
+        background-color: rgba(1, 142, 213, 0.904);
+        color: white;
+        border-radius: 30px;
+        transition: 0.3s;
+    }
+    .carousel-caption h4 {
+        font-size: 18px;
+    }
+    .building{
+        display: flex;
+        flex-direction: column;
+       
+    }
+    .building div{
+        margin: 3px;
+        margin-top: 50px;
+    }
+    .inner-text h1{
+        font-size: 26px;
+        padding-top: 10px;
+    }
+    .dropdown{
+        display: none;
+    }
+
+
+    /* Experience section */
+    .experience-text{
+        margin-top: -55px;
+        text-align: center;
+     }
+     .experience-text h4{
+        color:  rgb(31,162,212);
+        font-size: 16px;
+     }
+     .experience-text h1{
+      font-size: 30px;
+      margin-top: 15px;
+     }
+     .experience-text p{
+        font-size: 15px;
+        color: rgb(129, 111, 111);
+        margin-top: 20px;
+     }
+     .experience-img img{
+        width: 90%;
+        height: 470px;
+        margin-top: 50px;
+        margin-left: 20px;
+    
+    
+    }
+    .blog-card{
+        margin-top: 35px;
+     }   
+     .professional-section h1{
+        font-size: 27px;
+          
+        }
+        .professional-section h4{
+           font-size: 14px;
+          
+        }
+        .Mission-section{
+            text-align: center;
+        }
+        .professional-section{
+          
+            padding: 50px;
+           
+          }
+          .brand-section img{
+            width: 85%;
+            height: 180px;
+            margin-top: 15px;
+            margin-bottom: 25px;
+         }
+         
+}
+
+@media only screen and (max-width: 575px) {
+   
+    header {
+        padding: 15px 20px  5px 20px;
+    }
+    nav ul {
+        top: 58.18px;
+        height: calc(100vh - 65.18px);
+    }
+    nav ul li a {
+        font-family: system-ui;
+        font-size: 20px;
+        font-weight: 500;
+        
+    }.carousel-item {
+        height: 100vh;
+        min-height: 300px;
+        width: 100%;
+    }
+    .carousel-caption {
+        z-index: 2;
+        color: white;
+        margin-bottom: 50px;
+        padding-bottom: 50px;
+    }
+    .carousel-caption h4 {
+        font-size: 18px;
+    }
+    .experience-text h1{
+        display: block;
+        font-size: 30px;
+    }
+    .experience-text h4{
+        display: block;
+    }
+
+    .inner-text{
+        border: none;
+        padding: 0px;
+    }
+    
+    .inner-text h1{
+        font-size: 24px;
+        margin-top: 15px;
+    }
+    
+
+    .construction-engineer{
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.788), rgba(22, 133, 184, 0.603)) ,url(img/stee.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 280px;
+        text-align: center;
+        color: white;
+        border-radius: 25px;
+    }
+    .construction-building{
+        background-image: linear-gradient(to right,rgba(0, 0, 0, 0.877), rgba(22, 133, 184, 0.829)) , url(img/finishing.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 280px;
+        color: white;
+        border-radius: 25px;
+        text-align: center;
+    }
+    .building{
+        display: flex;
+        margin-top: 10px;
+        margin: 15px;
+    }
+    .building div{
+        margin: 1px;
+        margin-top: 40px;
+    }
+
+    .inner-text h4{
+        font-size: 20px;
+        margin-top: 35px;
+        margin-bottom: 20px;
+    }
+    .inner-text button{
+        margin-top: 20px;
+        background-color: rgb(31,162,212);
+        color: white;
+        border: 1px solid rgb(31,162,212);
+        padding: 4px;
+        font-size: 15px;
+        width: 100px;
+        transition: 0.3s;
+    }
+ 
+    q {font-style: italic;
+        font-size: 22px;
+        color: white;
+        z-index: 2;
+        
+       }
+      
+      /* Add a blue color to the author */
+      .author {color: white;
+        z-index: 2;
+    font-size: 15px;
+    font-weight: 500;}
+    .professional-section{
+    
+        padding: 40px;
+        padding-bottom: 80px;
+        text-align: center;
+        
+      }
+      .professional-section h1{
+       
+        padding-top: 30px;
+        font-size: 23px;
+        }
+        .professional-section p{
+            font-size: 23px;
+        }
+        .Mission-section{
+            padding-top: 50px;
+        }
+        .services-card{
+            margin-top: 40px;
+        }
+        .services-card button{
+            font-size: 15px;
+        }
+        .certificate-header img{
+            height: 380px;
+            width: 60%;
+        
+         }
+         .hr{
+            display: none;
+            
+         }
+         .footer-footer{
+            padding-top: 30px;
+         }
+         .brand-section{
+            text-align: center;
+         }
+         .brand-section img{
+            width: 75%;
+            height: 150px;
+            margin-top: 15px;
+            margin-bottom: 25px;
+         }
+         
+
+         /* carssoul-Responsive */
+         #slider{
+            text-align: center;
+        }
+         .carousel-caption {
+            margin-bottom: 100px;
+            text-align: center; 
+        }
+        
+        .carousel-caption h1 {
+            font-size: 35px;
+            word-spacing: 1px;
+            padding-top: 20px;
+            padding-bottom: 10px;
+            font-weight: 600;
+            font-family: "Playfair Display", serif;
+        }
+        
+        .carousel-caption h4 {
+            font-family: system-ui;
+            font-size: 22px;
+            font-weight: 450;
+        }
+        
+        .carousel-caption button {
+            padding: 9px;
+            width: 150px;
+            margin-top: 30px;
+            font-size: 14px;
+            border: 1px solid rgb(31,162,212);
+            background-color: rgb(31,162,212);
+            color: white;
+            border-radius: 30px;
+            transition: 0.3s;
+        }
+        .Mission-section{
+            margin-top: 30px;
+        }
+        .Mission-section{
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .Mission-section p{
+            font-size: 18px;
+        }
+        .Mission-section2{
+            margin-top: 10px;
+        }
+        .experience-text p{
+            font-size: 18px;
+        }
+        .experience-text h4{
+            font-size: 18px;
+        }
+        .experience-text button{
+            width: 170px;
+            margin-top: 10px;
+            font-size: 14px;
+
+        }
+          /* Add an italic font style to all quotes */
+  q {
+    font-size: 20px;
+    
+   }                                            
+  
+  /* Add a blue color to the author */
+  .author {
+    font-size: 18px;
+  }
+  /* blog */
+  .Blog-header  h1{
+   font-size: 22px;
+   font-weight: 600;
+  color: #2e2a2a;
+
+  }
+  .blog-text h1{
+    font-size: 20px;
+  }
+  .blog-text p{
+    font-size: 18px;
+  }
+  .blog-text h4{
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  .professional-section h1{
+    font-size: 28px;
+
+  }
+  .professional-section h4{
+    font-size: 18px;
+
+  }
+  .professional-section p{
+    font-size: 18px;
+  }
+  .footer-section{
+    text-align: center;
+    padding-bottom: 50px;
+  }
+  .footer-section h1{
+    font-size: 20px;    
+    padding-top: 15px;
+  }
+  .footer-section h4{
+    font-size: 19px;
+  }
+  .footer-section p{
+    font-size: 19px;
+  }
+  .footer-icon{
+    margin-left: 100px;
+  }
+  #text5{
+    margin-top: 90px;
+  }
+  .Architectural-services{
+    margin-top: 110px;
+    width: 100%;
+    padding: 20px;
+    background-color: rgba(177, 25, 25, 0.12);
+    border-radius: 12px;
+}
+
+.Architectural-services h1{
+    font-size: 20px;
+}
+.Architectural-services p{
+    font-size: 18px;
+    padding-top: 30px;
+}
+.Architectural-services img{
+    height: 40px;
+    width: 40px;
+    margin-top: 20px;
+}
+.director{
+    float: right;
+}
+.director h4{
+    font-size: 18px;
+}
+.director h5{
+    float: right;
+    font-size: 18px;
+}
+
+.services2-Header h4{
+    font-size: 18px;
+}
+.services2-Header h1{
+    font-size: 30px;
+    font-weight: 500;
+    padding-top: 15px;
+} 
+.services2-Header img{
+    height: 40px;
+    width: 40px;
+    margin-top: 10px;
+}
+.dropdown{
+    display: none;
+}
+}
+/* footer icon */
+.fa-location-dot ,.fa-envelope,.fa-phone{
+    margin-right: 10px;
+}
