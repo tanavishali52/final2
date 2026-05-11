@@ -41,9 +41,13 @@ nav ul {
 
 nav a {
     font-size: 14px;
-  
     text-decoration: none;
     margin-left: 30px;
+}
+@media only screen and (max-width: 991px) {
+    nav a {
+        margin-left: 0;
+    }
 }
 
 nav a#logo {
@@ -661,6 +665,18 @@ margin-top: 100px;
     height: 180px;
     margin-top: 15px;
     margin-bottom: 25px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 8px;
+    border: 3px solid transparent;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, border 0.4s ease;
+    cursor: pointer;
+ }
+ .brand-section img:hover{
+    transform: scale(1.1) translateY(-8px);
+    box-shadow: 0 0 22px rgba(31, 162, 212, 0.75), 0 18px 35px rgba(0, 0, 0, 0.5);
+    border: 3px solid rgb(31, 162, 212);
  }
  .brand-text h1{
     padding-top: 50px;
@@ -784,10 +800,15 @@ margin-top: 100px;
     #ham-menu {
         display: block;
         color: #000000;
+        font-size: 26px;
+        cursor: pointer;
+        transition: 0.3s;
     }
-    nav a#logo,
-    #ham-menu {
-        font-size: 23px;
+    #ham-menu:hover {
+        color: rgb(31, 162, 212);
+    }
+    nav a#logo {
+        font-size: 22px;
     }
     nav ul {
         background-color: rgb(255, 255, 255);
@@ -795,17 +816,38 @@ margin-top: 100px;
         top: 60px;
         width: 100vw;
         position: fixed;
-        height: calc(100vh - 73.6px);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        transition: 1s;
-        gap: 0;
+        height: calc(100vh - 60px);
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        padding-top: 20px !important;
+        transition: left 0.4s ease;
+        gap: 0 !important;
         z-index: 3;
+        overflow-y: auto;
+    }
+    nav ul li {
+        width: 85%;
+        text-align: center;
+        border-bottom: 1px solid rgba(31, 162, 212, 0.2);
+        flex-grow: 0;
+        flex-shrink: 0;
+        margin: 0;
     }
     nav ul li a {
-        font-size: 20px;
+        font-size: 16px;
+        display: block;
+        padding: 16px 0;
+        color: rgb(26, 24, 24);
+        font-weight: 600;
+        transition: color 0.3s, background-color 0.3s;
+        width: 100%;
+        margin-left: 0 !important;
+    }
+    nav ul li a:hover {
+        color: rgb(31, 162, 212);
+        background-color: rgba(31, 162, 212, 0.05);
     }
     
     
@@ -1238,14 +1280,21 @@ margin-top: 100px;
         overflow: hidden;
     }
     nav ul {
-        top: 58.18px;
-        height: calc(100vh - 65.18px);
+        top: 58px;
+        height: calc(100vh - 58px);
+        padding-top: 20px;
+        justify-content: flex-start !important;
+    }
+    nav ul li {
+        width: 90%;
+        flex-grow: 0;
+        flex-shrink: 0;
     }
     nav ul li a {
-        font-family: system-ui;
-        font-size: 20px;
-        font-weight: 500;
-        
+        font-size: 16px;
+        padding: 16px 0;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 600;
     }.carousel-item {
         height: 100vh;
         min-height: 300px;
